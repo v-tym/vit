@@ -1,0 +1,55 @@
+<div *ngIf="ln=='RU'">
+     <div class="btn-group-toggle" [class.active]="a6">
+       <label  class="btn btn-secondary " >
+         <input type="checkbox" name="option1" value="a6" checked [(ngModel)]="a6" (change)='Toggle()'> Навыки
+       </label>
+     </div>
+     <div class="btn-group-toggle" [class.active]="a4">
+       <label  class="btn btn-secondary " >
+         <input type="checkbox" name="option1" value="a4" checked [(ngModel)]="a4" (change)='Toggle()'> Опыт_работы
+       </label>
+     </div>
+     <div class="btn-group-toggle" [class.active]="a5">
+       <label  class="btn btn-secondary " >
+         <input type="checkbox" name="option1" value="a5" checked [(ngModel)]="a5" (change)='Toggle()'> Образование
+       </label>
+     </div>
+   
+   </div>
+   
+   <div *ngIf="ln=='UA'">
+     <div class="btn-group-toggle" [class.active]="a6">
+       <label  class="btn btn-secondary ">
+         <input type="checkbox" name="option1" value="a6" checked [(ngModel)]="a6" (change)='Toggle()'> Навички
+       </label>
+     </div>
+     <div class="btn-group-toggle"  [class.active]="a4">
+       <label  class="btn btn-secondary ">
+         <input type="checkbox" name="option1" value="a4" checked [(ngModel)]="a4" (change)='Toggle()'> Досвід_роботи
+       </label>
+     </div>
+     <div class="btn-group-toggle" [class.active]="a5">
+       <label  class="btn btn-secondary " >
+         <input type="checkbox" name="option1" value="a5" checked [(ngModel)]="a5" (change)='Toggle()'> Освіта
+       </label>
+     </div>
+   
+   </div>
+   
+   <div *ngIf="ln=='EN'">
+     <div class="btn-group-toggle" [class.active]="a6">
+       <label  class="btn btn-secondary " >
+         <input type="checkbox" name="option1" value="a6" checked [(ngModel)]="a6" (change)='Toggle()'> Skills
+       </label>
+     </div>
+     <div class="btn-group-toggle" [class.active]="a4">
+       <label  class="btn btn-secondary " >
+         <input type="checkbox" name="option1" value="a4" checked [(ngModel)]="a4" (change)='Toggle()'> Experience
+       </label>
+     </div>
+     <div class="btn-group-toggle" [class.active]="a5">
+       <label  class="btn btn-secondary " >
+         <input type="checkbox" name="option1" value="a5" checked [(ngModel)]="a5" (change)='Toggle()'> Education
+       </label>
+     </div>   
+   </div>

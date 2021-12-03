@@ -1,0 +1,31 @@
+h3 {
+    color: var(--red);
+}
+
+.form {
+    float: left;
+    height: 520px;
+    margin-top: 20px;
+}
+
+.g-map {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 350px;
+    height: 522px;
+}
+
+.g-map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+/*Планшеты*/
+@media (max-width: 768px) {
+    .form {
+        float: none;
+        margin-left: 0%;
+    }
+    .g-map {margin-left: 0;
+    }
+}

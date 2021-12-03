@@ -1,0 +1,19 @@
+.github { 
+    font-family: var(--text-g);   
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+h3 {
+    color: var(--red);
+}
+
+a {
+    color: var(--blue);
+}
+
+@media screen { 
+    iframe {
+        height: 90vh;
+    }
+}

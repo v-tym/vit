@@ -1,0 +1,50 @@
+<div class="form" [style.display] = "visibility? 'block' : 'none'">
+
+    <p class="roll-text" *ngIf="_ln==='RU'">Оценка проекта и по всем вопросам!</p>
+    <p class="roll-text" *ngIf="_ln==='UA'">Оцінка проекту та по всім питанням!</p>
+    <p class="roll-text" *ngIf="_ln==='EN'">Evaluation of the project and all issues!</p>
+    <form #myForm="ngForm" novalidate (ngSubmit)="onSubmit(myForm.value)" enctype="multipart/form-data">
+        <div class="project-form">
+            <div class="form-group f1">                
+                <input class="form-control name" name="name" [(ngModel)]="mailForm.name" required placeholder={{_name[0]}} />
+            </div>
+            <div class="form-group f1">            
+                <input class="form-control email" name="email" [(ngModel)]="mailForm.email"  placeholder="E-mail*" 
+                    required email />
+            </div>
+            <div class="form-group f1">                
+                <input class="form-control phone" name="phone" [(ngModel)]="mailForm.phone" required pattern="[+]{1}[0-9]{12}"  placeholder={{_tel[0]}} type="text"/>
+            </div>            
+            <div class="form-group">        
+                <textarea name="message" [(ngModel)]="mailForm.message" placeholder={{_message[0]}}></textarea>        
+            </div>
+            <div  class="form-group file">
+                <input type="file" [(ngModel)]="mailForm.file" accept="image/*, application/pdf, application/msword, application/x-rar-compressed, application/zip" value="1" size="40" type="file" name="file" (change)="onFileChange($event)" />
+                <p>pdf, jpg, png, doc, docx, rar, zip {{percentDone}}</p>
+            </div>
+            <div class="form-group sendb">
+                <button *ngIf="_ln==='RU'" [disabled]="myForm.invalid"
+                class="btn btn-default">Отправить</button>
+                <button *ngIf="_ln==='UA'" [disabled]="myForm.invalid"
+                class="btn btn-default">Відправити</button>
+                <button *ngIf="_ln==='EN'" [disabled]="myForm.invalid"
+                class="btn btn-default">Send mail</button>
+            </div>                   
+        </div>
+    </form>
+</div>
+
+<div class="form-ok" [style.display] = "!visibility? 'block' : 'none'">
+   <button style="height: 100%; width: 100%;" [ngStyle]="{'background': 'linear-gradient(to top, var(--blue) '+ percentDone +'%, grey '+ percentDone2 +'%)'}" *ngIf="_ln==='RU'">
+    <p>Загрузка данных {{percentDone}}%</p>
+    <p [style.color] = "error? 'greenyellow' : 'black'">{{status1}}</p>
+</button> 
+   <button style="height: 100%; width: 100%;" [ngStyle]="{'background': 'linear-gradient(to top, var(--blue) '+ percentDone +'%, grey '+ percentDone2 +'%)'}"  *ngIf="_ln==='UA'">
+    <p>Загрузка даних {{percentDone}}%</p>
+    <p [style.color] = "error? 'greenyellow' : 'black'">{{status2}}</p>
+</button> 
+   <button style="height: 100%; width: 100%;" [ngStyle]="{'background': 'linear-gradient(to top, var(--blue) '+ percentDone +'%, grey '+ percentDone2 +'%)'}"  *ngIf="_ln==='EN'">
+    <p>Data download {{percentDone}}%</p>
+    <p [style.color] = "error? 'greenyellow' : 'black'">{{status3}}</p>
+</button> 
+</div>

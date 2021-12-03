@@ -1,0 +1,5 @@
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label *ngFor="let l of languages" class="btn" [class.active]="l ==_lang">
+      <input type="radio" name="options" id="option1" autocomplete="off" (click)="radioClick(l)"> <a href="/#/{{l}}"></a> {{l}}
+    </label>
+  </div>

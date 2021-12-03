@@ -1,0 +1,22 @@
+<div id="menu">
+    <div class="nav" >           
+        <a  routerLink="{{_lang}}" class="logo">
+        <span class="roll-text">
+            <span>V</span>
+            <span class="logo_point">&bull;</span>
+            <span>T</span>
+        </span>
+        </a>
+    </div>
+
+    <div *ngFor="let item of menu" class="menu" routerLinkActive="selected">          
+        <span *ngIf="_lang=='UA'"><a routerLink="{{_lang+'/'+item?.Value_US}}" class="roll-text">{{item?.Value_UA}}</a></span>
+        <span *ngIf="_lang=='EN'"><a routerLink="{{_lang+'/'+item?.Value_US}}" class="roll-text">{{item?.Value_US}}</a></span>
+        <span *ngIf="_lang=='RU'"><a routerLink="{{_lang+'/'+item?.Value_US}}" class="roll-text">{{item?.Value_RU}}</a></span>      
+    </div>
+
+    <div class="lang">
+       <app-lang #lang1></app-lang> 
+    </div>
+</div> 
+

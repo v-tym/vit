@@ -1,0 +1,93 @@
+#menu {
+    font-family: var(--text-g);
+    font-size: 22px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    border-bottom:solid 1px;
+}
+
+div.nav {
+    float: left;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+div.menu {   
+    position: relative;
+    bottom: -10px;
+    display: inline;   
+    text-align: center;
+}
+
+div.menu>span>a {
+    margin: 6px;
+    padding: 6px 5px 8px 6px;
+    border-radius: 8px;
+    top: 0;
+    transition-property: all;
+    transition-duration: 1.2s;   
+}
+
+div.lang {
+    float: right;
+    margin-right: 10px;
+}
+
+a.logo {
+    color: var(--blue);
+    font-size: 40px;
+}
+.logo_point {
+    position: relative;
+    bottom: 14px;
+    font-size: 30px;
+    transition-property: bottom;
+    transition-duration: .6s;
+    color: var(--red);
+}
+.logo_point:hover {
+    bottom: -10px;
+}
+
+div.selected>span>a {
+    background-color: var(--grey);
+    position: relative;
+    top: 10px;
+    color: var(--blue);
+}
+
+a {
+    text-decoration: none;
+    color: var(--red);
+}
+
+@media (max-width: 800px) {    
+    div.lang {      
+        float: none;
+        margin-left: 10px;     
+    }
+    div.menu {
+        display: inline-block;  
+        padding-bottom: 1em;  
+    }
+
+    #menu {
+        padding-top: 30px;
+    }    
+}
+@media (max-width: 594px) {
+    #menu {
+        padding-top: 10px;
+    }    
+}
+
+
+/*Смартфоны*/
+@media (max-width: 360px) {
+    div.nav {
+        float: none;
+        text-align: center;
+        border-bottom: solid 1px;
+        border-radius: 0px;
+    }
+}

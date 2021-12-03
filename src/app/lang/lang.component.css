@@ -1,0 +1,28 @@
+div{
+    font-family: var(--text-g);
+    font-size: 15px;
+    margin-top: 17px;   
+    color: var(--red);
+}
+
+.btn {
+    font-family: var(--text-g);
+    cursor: pointer;
+}
+
+.active { 
+    background-color: var(--grey);
+    border-radius: 8px;
+    padding: 6px;
+    color: var(--blue);
+    transition-property: all;
+    transition-duration: 1.5s; 
+}
+
+input {
+    display: none; 
+}
+
+label {
+    padding: 6px;
+}

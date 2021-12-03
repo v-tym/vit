@@ -1,0 +1,45 @@
+.photo {
+    font-family: var(--text-g);
+    width: 40%;
+    float: left;
+    height: 700px;
+    background-image: url(/../../img/i7.png);    
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.photo img{
+    font-family: var(--text-g);
+    width: 100%;
+}
+
+.information{
+    font-family: var(--text-g);
+    margin-left: 35%;
+    min-height: 721px;
+}
+
+/*Ноутбуки*/
+@media (max-width: 1400px) {
+
+    .photo {
+        background-image: url(/../../img/i7i.png);
+        float: right;
+        max-width: 360px;
+        height: 420px;
+        background-size: 90%;
+    }
+
+    .information{
+        margin-left: 0;
+        min-height: 420px;
+    }
+}
+
+/*Планшеты*/
+@media (max-width: 768px) {
+    .photo{
+        display: none;
+    }
+}

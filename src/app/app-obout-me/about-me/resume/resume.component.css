@@ -1,0 +1,260 @@
+div.expeience {
+    font-family: var(--text-g);
+  }
+  
+  li {
+    font-family: var(--text-g);
+    list-style-type: none; /* Убираем маркеры */
+  }
+  
+  ol, ul {
+    padding-inline-start: 0px;
+  }
+  
+  div {
+     font-family: var(--text-g);
+    }
+  
+  .a1 {
+    font-family: var(--text-g);
+    color: var(--red);
+    text-align: center;
+  }
+  
+  .float {
+    float: left;
+    width: 50%;  
+  }
+  
+  .floatr{
+    margin-left: 50%;
+  }
+  
+  .block {
+    text-align: left;
+    color: rgb(117, 117, 117);
+    border: 3px solid transparent;
+    border-image: 
+      linear-gradient(
+        to right top,
+         rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        var(--blue),   
+         rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+      )500 10%;
+    background-color: none;
+    transition-property: background-color, color, text-align ;
+    transition-duration: .6s;
+    height: 400px;
+  }
+  
+  .block a {
+    color: var(--blue);
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .block a:hover {
+    background: var(--white);
+  }
+  
+  .block:hover {
+    color: var(--black); 
+  }
+  
+  .p1 {
+    font-family: var(--text-g);
+    text-align: center
+  }
+  
+  .p2 {
+    font-family: var(--text-g);
+    background: var(--grey);
+  }
+  
+  .dd {
+   font-size: 16px;
+   padding: 3px;
+   border: 2px solid;
+   border-image:
+   linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(75, 75, 75, 0.330),   
+    rgba(0, 0, 0, 0)
+  )1 1%
+  }
+  
+  div.q1 {
+    margin-left: 160px;
+  }
+  
+  div.q2 {
+    margin-left: 160px;
+  }
+  
+  div.q2>div {
+    display: inline;
+  }
+  
+  div.q1>div {
+    display: inline;
+  }
+  
+  h3 {
+    font-family: var(--text-g);
+    text-align: center;
+    color: var(--red);
+  }
+  
+  .q1 img{
+    height: 5em;
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 2.8em;
+    transition-property: all;
+    transition-duration: 1.0s;
+  }
+  
+  .q2 img {
+    height: 6em;
+    width: 10%;
+    margin-left: 4.5%;
+    margin-right: 4.5%;
+    margin-top: 3.5em;
+    transition-property: all;
+    transition-duration: 1.0s;
+  }
+  
+  .q1 img:hover,
+  .q2 img:hover {
+    transform: scale(1.5); 
+    }
+  
+  .s1 {
+    width: 160px;
+    float: left;
+    counter-reset: li; 
+    list-style: none; 
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  }
+  
+  .s1 a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 1em;
+    margin: .5em 0;
+    background: #D9D9D9;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+    }
+    
+  .engine { 
+    min-height: 300px;
+    border: 3px solid transparent;
+    border-image: 
+    linear-gradient(
+      to right top,
+       rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      var(--blue),  
+       rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0)
+    )500 10%;
+    background-color: none;
+    transition-property: background-color;
+    transition-duration: .6s;
+  }
+  
+  .program { 
+    min-height: 200px;
+    border: 3px solid transparent;
+    border-image: 
+    linear-gradient(
+      to right top,
+       rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+       var(--blue),   
+       rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0)
+    )500 10%;
+    background-color: none;
+    transition-property: background-color;
+    transition-duration: .6s;
+  }
+  
+  .ed {
+    font-family: var(--text-g);
+    font-size: 16px;
+    text-align: center;
+    border: 3px solid transparent;
+    border-image: 
+    linear-gradient(
+      to right top,
+       rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+     var(--blue),   
+       rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0)
+    )500 10%;
+    background-color: none;
+    transition-property: background-color;
+    transition-duration: .6s;
+  }
+  
+  .ed:hover,
+  .program:hover,
+  .engine:hover,
+  .block:hover,
+  .s1 a:hover {
+    background-color: #fff;
+  }
+  
+  @media (max-width: 1200px) {
+    .block { height: 320px;
+    }
+  }
+  
+  /*Планшеты*/
+  @media (max-width: 768px) {
+    .q1 img,
+    .q2 img {
+      display: none;
+    }
+  
+    .s1 {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+  
+    .s1 a:before {
+      display: none;
+    }
+  
+    li {
+      list-style-type: none; /* Убираем маркеры */
+     }
+    
+    ol,
+    ul {
+      padding-inline-start: 0px;
+    }
+  
+    .block { height: 360px;}
+  }
+  
+  @media (max-width: 650px) {
+    .float {
+      float: none;
+      width: 100%;
+    }
+    .block { height: auto;}
+  }

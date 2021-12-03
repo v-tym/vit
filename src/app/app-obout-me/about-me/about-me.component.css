@@ -1,0 +1,10 @@
+div {
+    font-family: var(--text-g);
+}
+
+h1 {
+    font-family: var(--text-g);
+    color: var(--red);
+    text-align: center;
+}
+

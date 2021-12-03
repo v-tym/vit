@@ -1,0 +1,172 @@
+<div *ngIf="a6">
+    <h2 *ngIf="ln=='RU'" class="a1">НАВЫКИ</h2>
+    <h2 *ngIf="ln=='UA'" class="a1">НАВИЧКИ</h2>
+    <h2 *ngIf="ln=='EN'" class="a1">SKILLS</h2>
+  
+    <div class="engine">
+      <div class="s1">
+        <ol>
+          <li *ngFor="let _skilsEng of skilsEng"><a>{{_skilsEng.tool_engineer}}</a></li>
+        </ol>
+      </div>
+  
+      <div class="q1">
+        <div>
+          <a href="https://www.autodesk.ru/products/autocad/overview" target="_blank">
+            <img src="../../img/autocad.png" alt="AutoCAD"></a>
+        </div>
+        <div>
+          <a href="https://www.autodesk.ru/products/inventor/overview" target="_blank">
+            <img src="../../img/Inventor.png" alt="Inventor"></a>
+        </div>
+        <div>
+          <a href="https://kompas.ru/" target="_blank">
+            <img src="../../img/logo-Kompas2.png" alt="Компас 3D"></a>
+        </div>
+        <div>
+          <a href="https://www.solidworks.com/ru" target="_blank">
+            <img src="../../img/solidw.png" alt="SolidWorks"></a>
+        </div>
+        <div>
+          <a href="https://www.autodesk.com/products/advance-steel/overview" target="_blank">
+            <img src="../../img/Autodesk-Advance-Steel.png" alt="Advance Steel"></a>
+        </div>
+        <div>
+          <a href="https://www.tekla.com/ru" target="_blank">
+            <img src="../../img/tekla.png" alt="Tekla"></a>
+        </div>
+        <div>
+          <a href="https://www.ansys.com/" target="_blank">
+            <img src="../../img/logo-ansys.jpg" alt="ANSYS"></a>
+        </div>
+        <div>
+          <a href="https://www.hypertherm.com/ru/hypertherm/pronest/pronest-cadcam-nesting-software/" target="_blank">
+            <img src="../../img/pronest.png" alt="Pronest"></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="program">
+      <div class="s1">
+        <ul>
+          <li *ngFor="let _skilsProg of skilsProg"><a>{{_skilsProg.tool_programing}}</a></li>
+        </ul>
+      </div>
+      <div class="q2">
+        <div>
+          <a href="https://docs.microsoft.com/ru-ru/dotnet/csharp/tour-of-csharp/" target="_blank">
+            <img src="../../img/Csharp_Logo.png" alt="C Sharp"></a>
+        </div>
+        <div>
+          <a href="https://www.w3.org/html/" target="_blank">
+            <img src="../../img/HTML.png" alt="HTML"></a>
+        </div>
+        <div>
+          <a href="https://ru.wikipedia.org/wiki/CSS" target="_blank">
+            <img src="../../img/css3.png" alt="CSS"></a>
+        </div>
+        <div>
+          <a href="https://angular.io/" target="_blank">
+            <img src="../../img/Angular.png" alt="Angular"></a>
+        </div>
+        <div>
+          <a href="https://www.typescriptlang.org/" target="_blank">
+            <img src="../../img/typeScript.png" alt="TypeScript"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="expeience" *ngIf="a4">
+    <h2 *ngIf="ln=='RU'" class="a1">ОПЫТ РАБОТЫ</h2>
+    <h2 *ngIf="ln=='UA'" class="a1">ДОСТВІД РОБОТИ</h2>
+    <h2 *ngIf="ln=='EN'" class="a1">EXPERIENCE</h2>
+  
+    <div *ngIf="ln=='UA'">
+      <div class="block" *ngFor="let e of experience">
+        <div class="float">
+          <div class="dd"><span><strong>Посада: </strong></span>{{e.Position_UA | uppercase}}</div>
+          <div class="dd"><span><strong>Період: </strong></span>{{e.Period_UA}}</div>
+          <div class="dd"><span><strong>Компанія: </strong></span>{{e.Name_Company_UA}}</div>
+          <div class="dd" *ngIf="e.Site!==''"><span><strong>Сайт: </strong></span><a href="{{e.Site}}"
+              target="_blank">{{e.Site}}</a></div>
+          <div class="dd"><span><strong>Обов'язки: </strong></span>{{e.Responsibility_UA}}</div>
+        </div>
+        <app-experience-img [id]="e.id"></app-experience-img>
+      </div>
+    </div>
+    <div *ngIf="ln=='RU'">
+      <div class="block" *ngFor="let e of experience">
+        <div class="float">
+          <div class="dd"><span><strong>Должность: </strong></span>{{e.Position_RU | uppercase}}</div>
+          <div class="dd"><span><strong>Период: </strong></span>{{e.Period_RU}}</div>
+          <div class="dd"><span><strong>Компания: </strong></span>{{e.Name_Company_RU}}</div>
+          <div class="dd" *ngIf="e.Site!==''"><span><strong>Сайт: </strong></span><a href="{{e.Site}}"
+              target="_blank">{{e.Site}}</a></div>
+          <div class="dd"><span><strong>Обязанности: </strong></span>{{e.Responsibility_RU}}</div>
+        </div>
+        <app-experience-img [id]="e.id"></app-experience-img>
+      </div>
+    </div>
+    <div *ngIf="ln=='EN'">
+      <div class="block" *ngFor="let e of experience">
+        <div class="float">
+          <div class="dd"><span><strong>Role: </strong></span>{{e.Position_EN | uppercase}}</div>
+          <div class="dd"><span><strong>Duration: </strong></span>{{e.Period_EN}}</div>
+          <div class="dd"><span><strong>Company: </strong></span>{{e.Name_Company_EN}}</div>
+          <div class="dd" *ngIf="e.Site!==''"><span><strong>Description: </strong></span><a href="{{e.Site}}"
+              target="_blank">{{e.Site}}</a></div>
+          <div class="dd"><span><strong>Responsibilities: </strong></span>{{e.Responsibility_EN}}</div>
+        </div>
+        <app-experience-img [id]="e.id"></app-experience-img>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="a5">
+    <h2 *ngIf="ln=='RU'" class="a1">ОБРАЗОВАНИЕ</h2>
+    <h2 *ngIf="ln=='UA'" class="a1">ОСВІТА</h2>
+    <h2 *ngIf="ln=='EN'" class="a1">EDUCATION</h2>
+    <div *ngIf="ln=='RU'">
+      <div class="ed">
+        <p><strong>Университет: </strong>Черниговский национальный технологический университет</p>
+        <p><strong>Направление: </strong>механико-технологический, инженер сварочного производства, специалист, Чернигов
+        </p>
+        <p>Высшее, с 09.2009 по 05.2014 (4 года 8 месяцев)</p>
+      </div>
+  
+      <h2 class="a1">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</h2>
+      <div class="ed">
+        <p><strong>Институт: </strong>Черниговский профессиональный лицей железнодорожного транспорта №5</p>
+        <p><strong>Квалификация: </strong>(Электрогазосварщик 3 разряда)</p>
+      </div>
+    </div>
+  
+    <div *ngIf="ln=='UA'">
+      <div class="ed">
+        <p><strong>Інститут: </strong>Чернігівський національний технологічний університет</p>
+        <p><strong>Кваліфікація: </strong>механіко-технологічний, інженер зварювального виробництва, фахівець, Чернігів</p>
+        <p><strong>Час навчання: </strong>Вища, з 09.2009 по 05.2014 (4 роки 8 місяців)</p>
+      </div>
+  
+      <h3 class="a1">ДОДАТКОВА ОСВІТА</h3>
+      <div class="ed">
+        <p><strong>Інститут: </strong>Чернігівський професійний ліцей залізничного транспорту №5</p>
+        <p><strong>Кваліфікація: </strong>(Електрогазозварник 3 розряду)</p>
+      </div>
+    </div>
+  
+    <div *ngIf="ln=='EN'">
+      <div class="ed">
+        <p><strong>Institution: </strong>Chernihiv National University of Technology</p>
+        <p><strong>Qualification: </strong>mechanics and technology, welding production engineer, specialist, Chernigov</p>
+        <p><strong>Date(s) Attended: </strong>Higher, from 09.2009 to 05.2014 (4 years 8 months)</p>
+      </div>
+  
+      <h3 class="a1">ADDITIONAL EDUCATION</h3>
+      <div class="ed">
+        <p><strong>Institution: </strong>Chernihiv Professional Lyceum of Railway Transport №5</p>
+        <p><strong>Qualification: </strong>electric gas welder of 3-rd category</p>
+      </div>
+    </div>
+  </div>

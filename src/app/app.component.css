@@ -1,0 +1,18 @@
+div {   
+    border: 1px dashed #333;      
+}
+
+#sidebar{
+    background-color: #ddd;
+    float: left;
+    width: 250px;
+}
+
+#main{
+    background-color: #eee;
+    margin-left: 270px;
+}
+
+#footer{ 
+    background-color: #ccc;
+}

@@ -1,0 +1,130 @@
+input.ng-touched.ng-invalid {border:solid var(--red) 2px;}
+input.ng-touched.ng-valid {border:solid var(--green) 2px;}
+
+div{
+    font-family: var(--text-g);
+}
+
+p{
+    text-align: center;
+    font-size: 14px;
+    color: var(--grey2);
+    margin: 0;
+}
+.roll-text{
+    font-size: 20px;
+    color: var(--red);
+    padding-bottom: 20px;
+}
+
+.form {   
+    width: 272px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px 0 0;
+    margin: 0 0 50px;
+    transition-property: all;
+    transition-duration: .6s;
+}
+
+.form-ok {
+    min-height: 500px;
+    width: 272px;
+    text-align: center;
+    height: 100%;
+    padding-top: 0;
+}
+
+.form-ok button{
+    min-height: 500px;
+    height: 100%;
+    cursor: default;
+    border: none;
+}
+
+.form-ok p {
+    font-size: large;
+    color: var(--black);
+    text-shadow: var(--grey) 2px 3px 4px;
+}
+
+.form:hover {
+    background-color: var(--white)
+}
+
+.form-group>button {
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;  
+    padding: 0 40px;
+    margin-top: 12px;
+    margin-left: 63px;
+    margin-bottom: 12px; 
+    cursor: pointer;   
+}
+
+.file {
+    border: 1px solid var(--grey);
+    border-left: none;
+    border-right: none;
+    display: block;
+    padding: 0 20px 0;
+    padding-top: 0px;  
+      
+}
+
+.file input {
+    cursor: pointer;
+}
+
+input.name {
+    background: url(../../../img/ico1.png) 12px 6px  no-repeat;
+}
+
+input.email {
+    background: url(../../../img/ico4.png) 12px 6px  no-repeat;   
+}
+
+input.phone {
+    background: url(../../../img/ico3.png) 12px 6px  no-repeat;   
+}
+
+
+.f1>input {
+    padding: 0 10px 0 40px;
+    width: 218px;
+    height: 34px;
+    font-size: 13px;
+}
+
+textarea {
+    background: url(../../../img/ico5.png) no-repeat 9px 10px ;
+    padding: 10px 10px 0 40px;
+    width: 220px;
+    height: 205px;
+    font-size: 13px;
+    resize: none;
+}
+
+
+@media (max-width: 768px) {
+    .form {
+        width: 100%;
+    }
+
+    .form-group {
+        text-align: center;
+    }
+
+    .f1 input{
+        width: 70%;
+    }
+
+    textarea {
+        width: 70%;
+    }
+
+    .sendb {
+        text-align: center;
+    }
+
+}
