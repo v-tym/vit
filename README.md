@@ -1,5 +1,7 @@
 # Обучение Angular на примере разработки собственного сайта
 
+Is published at https://v-tym.github.io/vit/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 ## Development server
