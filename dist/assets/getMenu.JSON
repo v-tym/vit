@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "Value_UA": "Про_мене",
+        "Value_RU": "Обо_мне",
+        "Value_US": "About_me"
+    },
+    {
+        "id": "3",
+        "Value_UA": "Портфоліо",
+        "Value_RU": "Портфолио",
+        "Value_US": "Portfolio"
+    },
+    {
+        "id": "4",
+        "Value_UA": "КМД",
+        "Value_RU": "КМД",
+        "Value_US": "Steel_Detailing"
+    },
+    {
+        "id": "5",
+        "Value_UA": "Контакти",
+        "Value_RU": "Контакты",
+        "Value_US": "Contact"
+    }
+]
